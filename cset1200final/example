@@ -1,0 +1,122 @@
+
+import java.util.Scanner;
+
+
+
+
+public class Eetex1
+
+
+{
+
+
+public static void main(String args[])
+
+
+{
+
+
+Scanner sc=new Scanner(System.in);
+float gradePoint[] = new float[5];
+int creditHour[] = new int[5];
+System.out.println("Enter number of EET courses you have taken: ");
+int n=sc.nextInt();
+for(int x = 0; x < 5;x++){
+
+
+System.out.println("Please Enter Your Grade Points: ");
+
+
+gradePoint[x] = sc.nextFloat();
+
+
+System.out.println("Please Enter Your Credit Hours: ");
+
+
+creditHour[x] = sc.nextInt();
+
+
+}
+
+
+
+
+
+
+
+double calculateGPA = (gradePoint[0] * creditHour[0]) + (gradePoint[1] * creditHour[1]) + (gradePoint[2] * creditHour[2]) + (gradePoint[3] * creditHour[3]) + (gradePoint[4] * creditHour[4]);
+
+
+double calculateCreditHour = creditHour[0] + creditHour[1] + creditHour[2] + creditHour[3] + creditHour[4];
+
+
+double cgpa_value = calculateGPA/calculateCreditHour;
+
+
+int courseList = (int)cgpa_value;
+
+
+switch(courseList){
+
+
+case 4:
+
+
+System.out.println("Year 1: Freshman Courses!");
+
+
+
+
+
+
+
+System.out.println("Congratulations.!!! You have completed all your course work");
+
+
+break;
+
+
+case 3:
+
+
+System.out.println("Year 2: Sophomore Department!");
+break;
+case 2:
+System.out.println("Year 3: Junior Department!");
+break;
+case 1:
+System.out.println("Year 4: Senior Department!");
+break;
+default:
+System.out.println("Sorry, you are not eligible for admissions.!");
+}
+
+  double[] courses=new double[n];
+   
+System.out.println("Enter the No. of courses");
+
+for(int i=0;i<n;i++)
+{
+courses[i]=sc.nextInt();
+}
+double gradesPoint[]=new double[n];
+double sum=0;
+for(int i=0;i<n;i++)
+{
+gradesPoint[i]=(courses[i]/10) ;
+}
+for(int i=0;i<n;i++)
+{
+sum+=gradesPoint[i];
+}
+cgpa_value=sum/n;
+
+System.out.println("cgpa_value="+cgpa_value);
+
+System.out.println("The overall percantage from cgpa_value="+cgpa_value*9.5);
+
+}
+
+
+}
+
