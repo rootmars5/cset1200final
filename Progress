@@ -31,6 +31,26 @@ public class Classes {
         PHYS-2020 = 5
         EET-2020 = 4
         CSET-2200 = 4
+        ENGT-3010 = 4
+        ENGT-3020 = 3
+        EET-3150 = 4
+        EET-2410 = 4
+        MET-2100 = 3
+        SocHumElect = 3
+        EET-3250 = 3
+        EET-3350 = 4
+        MET-2210 = 4
+        // JUNIOR COURSES DONE
+        MET-2050 = 4
+        MET-2120 = 4
+        EET-4350 = 4
+        SocHumElect = 3
+        ProfessionalDevelopmentElect = 3
+        EET-4450 = 4
+        ENGT-4050 = 3
+        SocSHumElect = 3
+        SocSHumElect = 3
+        
         
         
         
