@@ -12,6 +12,10 @@ public class Classes {
         System.out.println("Please enter your courses: ");
         //create lists for each year of college courses- those for freshmen, sophomore, etc.
         //assign every class name to a number which represents the credit hours the class is worth
+        EETCreditHours = EET_1010+EET_1410+EET_1020+EET_2210+EET_2010+EET_3150+EET_2410+EET_3250+EET_3350+EET_4350+EET_4450
+        
+        
+        
         ENGT-1000 = 1
         ENGL-1110 = 3
         MATH-1330 = 3                
