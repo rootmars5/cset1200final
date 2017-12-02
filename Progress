@@ -1,71 +1,170 @@
-import java.util.Scanner
-package classes;
-import javax.swing.*;
+package finalcsetproject;
 
-/**
- *
- * @author hhasan
- */
-public class Classes {
+import java.util.Scanner;
+
+
+
+
+
+public class FinalCSETProject{
 
     public static void main(String[] args) {
         System.out.println("Please enter your courses: ");
         //create lists for each year of college courses- those for freshmen, sophomore, etc.
         //assign every class name to a number which represents the credit hours the class is worth
-        EETCreditHours = EET_1010+EET_1410+EET_1020+EET_2210+EET_2010+EET_3150+EET_2410+EET_3250+EET_3350+EET_4350+EET_4450
+       
+        
+        Scanner scan = new Scanner(System.in);
         
         
         
-        ENGT-1000 = 1
-        ENGL-1110 = 3
-        MATH-1330 = 3                
-        EET-1010 = 4
-        CHEM-1230 = 4
-        MultiCultElect = 3
-        ENGL-2950 = 3
-        EET-1410 = 3
-        EET-1020 = 4
-        EET-2210 = 4
+        int ENGT_1000 = 1;
+        int ENGL_1110 = 3;
+        int MATH_1330 = 3;                
+        int EET_1010 = 4;
+        int CHEMCreditHours = 4;
+        int MultiCultElect = 3;
+        int ENGL_2950 = 3;
+        int EET_1410 = 3;
+        int EET_1020 = 4;
+        int EET_2210 = 4;
         // FRESHMAN COURSES DONE
-        MATH-2450 = 4
-        PHYS-2010 = 5
-        EET-2010 = 4
-        CommsElect = 3
-        MATH-2460 = 4
-        PHYS-2020 = 5
-        EET-2020 = 4
-        CSET-2200 = 4
-        ENGT-3010 = 4
-        ENGT-3020 = 3
-        EET-3150 = 4
-        EET-2410 = 4
-        MET-2100 = 3
-        SocHumElect = 3
-        EET-3250 = 3
-        EET-3350 = 4
-        MET-2210 = 4
+        int MATH_2450 = 4;
+        int PHYS_2010 = 5;
+        int EET_2010 = 4;
+        int CommsElectCreditHours = 3;
+        int MATH_2460 = 4;
+        int PHYS_2020 = 5;
+        int EET_2020 = 4;
+        int CSETCreditHours = 4;
+        int ENGT_3010 = 4;
+        int ENGT_3020 = 3;
+        int EET_3150 = 4;
+        int EET_2410 = 4;
+        int MET_2100 = 3;
+        int SocHumElect = 12;
+        int EET_3250 = 3;
+        int EET_3350 = 4;
+        int METCreditHours = 3;
         // JUNIOR COURSES DONE
-        MET-2050 = 4
-        MET-2120 = 4
-        EET-4350 = 4
-        SocHumElect = 3
-        ProfessionalDevelopmentElect = 3
-        EET-4450 = 4
-        ENGT-4050 = 3
-        SocSHumElect = 3
-        SocSHumElect = 3
+        int MET_2050 = 4;
+        int MET_2120 = 4;
+        int EET_4350 = 4;
+        int ProfessionalDevelopmentElect = 3;
+        int EET_4450 = 4;
+        int ENGT_4050 = 3;
+        
+        int EETCreditHours = EET_1010+EET_1410+EET_1020+EET_2210+EET_2010+EET_3150+EET_2410+EET_3250+EET_3350+EET_4350+EET_4450;
+        
+        
+        int ENGTCreditHours = ENGT_1000+ENGT_3010+ENGT_3020+ENGT_4050;
+        
+        
+        int ENGLCreditHours = ENGL_1110+ENGL_2950;
+        
+        
+        int MATHCreditHours = MATH_1330+MATH_2450+MATH_2460;
+        
+        
+        int MulticulturalCreditHours = SocHumElect;
+        
+        
+        int PHYSCreditHours = PHYS_2010+PHYS_2020;
+        
+        
+        int TotalCreditHours = 128;
+        
+        
+        System.out.println("Enter the number EET classes taken: ");
+        int EETClasses = Integer.parseInt(scan.nextLine());
+        String EETClassesArray[] = new String[EETClasses];
+        
+        
+        for(int i = 0; i < EETClassesArray.length; i++)
+        {
+            System.out.println("Enter EET class number: " + (i+1) );
+            EETClassesArray[i] = scan.nextLine();
+            
+        }
+        for(String EETClassesArray1 : EETClassesArray)
+        {if(EETClassesArray1.equals("EET-1010"))
+        {EETCreditHours -= 4;
+        }
+        else if(EETClassesArray1.equals("EET-1410"))
+        {EETCreditHours -= 3;}
+        }
+        
+        System.out.println("Enter the number ENGL classes taken: ");
+        int ENGLClasses = Integer.parseInt(scan.nextLine());
+        String ENGLClassesArray[] = new String[ENGLClasses];
+        
+        
+        for(int i = 0; i < ENGLClassesArray.length; i++)
+        {
+            System.out.println("Enter ENGL class number: " + (i+1) );
+            ENGLClassesArray[i] = scan.nextLine();
+            
+        }
+        
+        System.out.println("Enter the number MATH classes taken: ");
+        int MATHClasses = Integer.parseInt(scan.nextLine());
+        String MATHClassesArray[] = new String[MATHClasses];
+        
+        
+        for(int i = 0; i < MATHClassesArray.length; i++)
+        {
+            System.out.println("Enter MATH class number: " + (i+1) );
+            MATHClassesArray[i] = scan.nextLine();
+            
+        }
+        System.out.println("Enter the number MET classes taken: ");
+        int METClasses = Integer.parseInt(scan.nextLine());
+        String METClassesArray[] = new String[METClasses];
+        
+        for(int i = 0; i < METClassesArray.length; i++)
+        {System.out.println("Enter MATH class number: " + (i+1) );
+            MATHClassesArray[i] = scan.nextLine();
+        }
+        System.out.println("Have you taken the CSET course? [type 'Yes' or 'No']" );
+        String CSETYesNo = scan.nextLine();
+        if (CSETYesNo.equals("Yes"))
+        {int FinalCSETCreditHours = CSETCreditHours - 4;
+        
+        }
+        else {int FinalCSETCreditHours = CSETCreditHours - 0;}
+        
+        System.out.println("Have you taken the Professional Development Elect course? [type 'Yes' or 'No']" );
+        String ProfessionalDevelopmentElectYesNo = scan.nextLine();
+        if (ProfessionalDevelopmentElectYesNo.equals("Yes"))
+        {int FinalProfessionalDevelopmentElectCreditHours = ProfessionalDevelopmentElect - 3;
+        
+        }
+        else {int FinalProfessionalDevelopmentElectCreditHours = ProfessionalDevelopmentElect - 0;}
+        
+        System.out.println("Have you taken the Communications Electtive course? [type 'Yes' or 'No']" );
+        String CommsElectYesNo = scan.nextLine();
+        if (CommsElectYesNo.equals("Yes"))
+        {int FinalCommsElectCreditHours = CommsElectCreditHours - 3;
+        
+        }
+        else {int FinalCommsElectCreditHours = CommsElectCreditHours - 0;}
+        
+        System.out.println("Have you taken the Chemistry course? [type 'Yes' or 'No']" );
+        String CHEMCreditHoursYesNo = scan.nextLine();
+        if (CHEMCreditHoursYesNo.equals("Yes"))
+        {int FinalCHEMCreditHours = CHEMCreditHours - 4;
+        
+        }
+        else {int FinalCHEMCreditHours = CHEMCreditHours - 0;}
+        
+        
+        System.out.println("Congratulations! You're ready to graduate!");
         
         
         
         
-        
-        
-        
-        
-        if credithours >= 128
-                System.out.println("Congratulations, you are ready to graduate!");
-        else System.out.println("You have not met all the prerequisites ")
-        
+
+
     
     }
     
